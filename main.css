@@ -7,12 +7,12 @@
 body {
     text-align: center;
     background-color: #212326;
-    color: #E6E6E6;
+    color: #e6e6e6;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 2em;
 }
 
-.soon-logo {
+main {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -23,19 +23,44 @@ body {
 .soon-logo img {
     padding: 3em;
     align-self: center;
-    max-width: 300px;
 }
 
-a {
-    /* text-decoration: none; */
-    color: #6e7580;
+main a {
+    text-decoration: none;
+    color: #2aa9c0;
+}
+
+main a:hover {
+    color: #e6e6e6;
 }
 
 .social a:not(:last-child):after {
     content: "/";
 }
 
-a:hover {
-    text-decoration: dotted;
-    color: #E6E6E6;
+#download {
+    border: none;
+    border-radius: 3px;
+    background-color: #2aa9c0;
+    color: #e6e6e6;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    align-self: center;
+    margin: 3em;
+    padding: 0.3em 0.6em;
 }
+
+#download:hover {
+    background-color: #e6e6e6;
+    color: #2aa9c0;
+}
+
+
+/* white: #e6e6e6; */
+
+
+/* black: #212326; */
+
+
+/* blue: #2aa9c0; */
