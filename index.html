@@ -5,31 +5,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' />
-    <link rel="stylesheet" href="main.css">
-    <title>Coming Soon... - Danny Van Eeckhoutte</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Home - Danny Van Eeckhoutte</title>
 </head>
 
 <body>
+    <div class="container">
+        <header class="grid" id="top">
+            <a href="index.html"><img src="./img/dve_light.png" alt="logo Danny Van Eeckhoutte"></a>
 
-    <main class="soon-logo">
+            <nav role="navigation flex" id="main-nav">
+                <a href="#home">Home</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#curiculum">Curiculum</a>
+                <a href="#footer">Contact</a>
+            </nav>
 
-        <img src="/img/dve_lightblue_txt.png" alt="portrait">
+            <div class="social flex">
 
-        <h4>Coming soon...</h4>
+                <a href="http://github.com" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
+                <a href="http://linkedin.com" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
 
-        <a href="mailto:danny.vaneeckhoutte@gmail.com">danny.vaneeckhoutte@gmail.com</a>
+        </header>
 
-        <div class="social">
-            <a href="https://github.com/dannyvaneeckhoutte" target="_blank">Github </a>
-            <a href="https://www.linkedin.com/in/dannyvaneeckhoutte/" target="_blank">LinkedIn </a>
-            <a href="https://www.instagram.com/dannyboy1975" target="_blank">Instagram</a>
-        </div>
+        <main>
 
+            <section id="home">
 
-        <a id="download" href="./docs/dve_cv.pdf" download="DannyVanEeckhoutte-cv.pdf"><i class="fas fa-arrow-circle-down"></i>&nbsp;Download mijn CV</a>
+                <h1>Hi,</h1>
+                <img src="img/Bio foto.jpg" alt="selfie" id="portrait">
+                <p>I'm Danny, a graphic- and webdesigner with an affinity for photography, studying web development to expand my skillset. Currently available for a job in Graphic design, web design, front-end development and / or photo retouching.
+                </p>
+                <button><a href="./docs/cv_dve_2020.pdf" download="DannyVanEeckhoutte-cv.pdf"><i class="fas fa-arrow-circle-down"></i>&nbsp;Download CV</a></button>
+            </section>
 
+            <section id="portfolio">
 
-    </main>
+                <h1>Portfolio</h1>
+
+                <!-- Slider -->
+                <div id="slider">
+                    <div class="slides-container">
+                        <div class="slide"><img src="img/img1.jpg" alt="Slider img 1"></div>
+                        <div class="slide"><img src="img/img2.jpg" alt="Slider img 2"></div>
+                        <div class="slide"><img src="img/img3.jpg" alt="Slider img 3"></div>
+                        <div class="slide"><img src="img/img4.jpg" alt="Slider img 4"></div>
+                        <div class="slide"><img src="img/img5.jpg" alt="Slider img 5"></div>
+                        <div class="slide"><img src="img/img6.jpg" alt="Slider img 6"></div>
+                        <div class="slide"><img src="img/img7.jpg" alt="Slider img 7"></div>
+                        <div class="slide"><img src="img/img8.jpg" alt="Slider img 8"></div>
+                        <div class="slide"><img src="img/img9.jpg" alt="Slider img 9"></div>
+                    </div>
+
+                    <!-- Slider arrows -->
+                    <div class="arrows">
+                        <a class="prev" href="#">
+                            <</i>
+                        </a>
+                        <a class="next" href="#">></a>
+                    </div>
+
+                    <!-- Slider pager -->
+                    <div class="pager">
+                        1 / 4
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="curiculum">
+                <h1>Curiculum Vitae</h1>
+
+                <div class="cv-wrapper">
+                    <div class="skills">
+                        <h2>Skills</h2>
+                        <h4>****</h4>
+                        <ul>
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>InDesign</li>
+                            <li>Lightroom</li>
+                            <br>
+                            <h4>***</h4>
+                            <li>Html & CSS</li>
+                            <li>Bootstrap</li>
+                            <li>Wordpress</li>
+                            <li>SEO</li>
+                            <br>
+                            <h4>**</h4>
+                            <li>Adobe XD</li>
+                            <li>Javascript</li>
+                            <li>jQuery</li>
+                            <li>MySql</li>
+                            <li>PHP</li>
+                        </ul>
+                        <br>
+                        <h2>Soft Skills</h2>
+                        <ul>
+                            <li>Eager to learn</li>
+                            <li>Passionate</li>
+                            <li>attention for detail</li>
+                            <li>Creative</li>
+                            <li>Independent</li>
+                            <li>Accurate</li>
+                            <li>Computer savvy</li>
+                        </ul>
+                        <br>
+                        <h2>Languages</h2>
+                        <ul>
+                            <li>Nederlands – Native</li>
+                            <li>Français - excelent</li>
+                            <li>English - excelent</li>
+                        </ul>
+                        <br>
+                        <h2>Education</h2>
+                        <i>Januari 2020 - juli 2020 </i>
+                        <h4>Webdeveloper | VDAB</h4>
+                        <ul>
+                            <li>Html</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>MySql</li>
+                            <li>PHP</li>
+                            <li>Wordpress</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                        <br>
+                        <i><br>2001 - 2001</i>
+                        <h4>Grafic Lay-out | CVO Merchtem</h4>
+                        <ul>
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>InDesign</li>
+                        </ul>
+                        <br>
+                        <i><br>1994 - 1997</i>
+                        <h4>Leercontract | ACEBE Antwerpen</h4>
+                        <p>Algemeen Grafische Technieken</p>
+                    </div>
+                    <div class="loopbaan">
+                        <h2>Loopbaan</h2>
+                        <i>Januari 2020 - juli 2020</i>
+                        <h4>Opleiding web ontwikkelaar VDAB</h4>
+                        <p>Html, CSS, WordPress, JavaScript, PHP, MySql</p>
+                        <i><br>2011 - 2019</i>
+                        <h4>Foto labo verantwoordelijke <br>Portrait Studios, Meise</h4>
+                        <p>Foto bewerking en restauratie <br>Grafisch Vormgver <br>Opleiding collega’s Photoshop/Lightroom/PC <br>Printen op en onderhoud van DKS Minilab en groot formaat printers (Canon, Epson) <br>Opmaken, versturen en beheren mailings
+                            via Mailchimp en Freshmail <br>Beheer sociale media kanalen (Facebook, Instagram) <br>Onderhoud websites (WordPress & Browsbox CMS) <br>Aankoop , samenstelling en onderhoud PC’s Stock beheer</p>
+                        <i><br>2010 - 2011</i>
+                        <h4>ManuMail, Lebbeke</h4>
+                        <p>Grafisch Vormgever Afstellen en bedienen digitale printers</p>
+                        <i><br>Maart 2009 - mei 2009</i>
+                        <h4>CDL bvba</h4>
+                        <p>Samenwerking voor project (Conferentie) Huisstijl ontwerp en grafisch vormgeving Ontwerp van panelen en andere visuals 3D opstelling van conferentie-ruimtes in Google Sketchup</p>
+                        <i><br>2009 - 2010</i>
+                        <h4>Freelancer</h4>
+                        <p>Verschillende opdrachten als grafisch vormgever en foto bewerking.</p>
+                        <i><br>2008 - 2009</i>
+                        <h4>Zelfstandige in bijberoep</h4>
+                        <p>Verschillende opdrachten als grafisch vormgever en fotograaf</p>
+                        <i><br>2007 - 2009</i>
+                        <h4>Megaluna Arts & Design, Jette</h4>
+                        <p>Grafisch Vormgever</p>
+                        <i><br>1997 - 2007</i>
+                        <h4>Arte-Print, Jette</h4>
+                        <p>Drukker, afwerker</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer id="footer" class="grid">
+            <div id="contact">
+                <h3>Contact info:</h3>
+                Danny Van Eeckhoutte
+                <br><a href="mailto:danny.vaneeckhoutte@gmail.com">danny.vaneeckhoutte@gmail.com</a>
+                <br>0498 69 77 40
+            </div>
+            <div id="copy">
+                <p>Code & Design &copy; <span id="year"></span> Danny Van Eeckhoutte</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JQuery & JS-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
 
 </body>
 
