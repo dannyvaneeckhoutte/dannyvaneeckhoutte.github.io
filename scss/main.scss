@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+$font-family: "Roboto", sans-serif;
+$color-text: #dedede;
+$color-medium: #363636;
+$color-background: #21282c;
+$color-accent-primary: #b4ab6a;
+$color-accent-secondary: #65b4b7;
+
+:root {
+	--color-text: #($color-text);
+}
+
+/* RESET */
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		color: --color-accent-primary;
+	}
+	&:active {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		transform: translateY(1px);
+	}
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	background: none;
+	border: 0;
+	color: inherit;
+	cursor: pointer;
+	font: inherit;
+	line-height: normal;
+	overflow: visible;
+	padding: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	&:focus {
+		outline: none;
+	}
+}
+
+/* END RESET */
+
+body {
+	margin: 0 auto;
+	background: $color-background;
+	color: $color-text;
+	font-family: $font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
+	color: $color-accent-primary;
+}
+
+h1 {
+	margin: 0.8em 0;
+	font-size: 2.2em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin-top: 1.4em;
+}
+
+p {
+	margin: 0.4em 0;
+}
+
+ul {
+	padding: 0;
+}
+
+/* SECTIONS */
+
+.container {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	// flex-wrap: nowrap;
+}
+
+header {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	background-color: $color-background;
+	flex-shrink: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	nav {
+		// z-index: 2;
+		display: flex;
+		// to reference the <ul> position: absolute
+		position: relative;
+		.mobile-nav {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 1em;
+			// Hide on large screens
+			display: none;
+			// show on screens smaller than 600px
+			@media only screen and (max-width: 600px) {
+				display: flex;
+			}
+			span {
+				display: block;
+				height: 2px;
+				width: 30px;
+				margin: 3px;
+				background: $color-text;
+			}
+			&.active {
+				span {
+					background: $color-text;
+				}
+			}
+			&:hover {
+				color: $color-accent-primary;
+				span {
+					background: $color-accent-primary;
+				}
+				&.active {
+					// background: $color-medium;
+					span {
+						background: $color-text;
+					}
+				}
+			}
+		}
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			transition: all ease 0.4s; // will work on opacity & height
+			// Hide nav on screens 600px and smaller:
+			@media only screen and (max-width: 600px) {
+				opacity: 0;
+				max-height: 0px;
+				overflow: hidden;
+				visibility: none;
+				display: flex;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 100%; // move menu down the height of the navbar
+				flex-direction: column;
+				background-color: $color-background;
+				margin-left: -100%;
+				// show when active class is added:
+				&.active {
+					opacity: 1;
+					max-height: 100vh;
+					width: 100vw;
+					margin-left: 0; // make links slide in from the left
+					// style menu vertically:
+					li {
+						display: block; // so link takes up 100% of screen width
+						a {
+							display: block; // so link takes up 100% of screen width
+						}
+					}
+				}
+			}
+			li {
+				display: inline-block;
+				a {
+					display: inline-block;
+					text-decoration: none;
+					padding: 1em;
+					&:hover {
+						background-color: #e1e1e1;
+						color: $color-accent-primary;
+					}
+				}
+			}
+		}
+	}
+}
+
+button {
+	background-color: none;
+	margin: 1em;
+	border: 1px solid $color-accent-primary;
+	padding: 0.6em 1.2em;
+	color: $color-accent-primary;
+	transition: all ease 0.3s;
+	a {
+		display: flex;
+		align-items: center; // To align icon with text
+	}
+	&:hover {
+		background-color: $color-accent-primary;
+		a {
+			color: $color-text;
+		}
+	}
+}
+
+a {
+	&:hover {
+		color: $color-accent-primary;
+	}
+	&.active {
+		color: $color-accent-primary;
+		transform: translateY(1px);
+		font-weight: bold;
+	}
+}
+
+main {
+	flex-grow: 1;
+	-ms-scroll-snap-type: mandatory;
+	scroll-snap-type: mandatory;
+	section {
+		scroll-snap-align: start;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding-top: 56px;
+		&#home {
+			height: 100vh;
+			img {
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+			}
+			h1 {
+				margin: 1em 0;
+			}
+			p {
+				max-width: 720px;
+				text-align: center;
+				margin: 0 1em;
+			}
+		}
+		&#portfolio {
+			width: 100%;
+			overflow: hidden;
+		}
+		&#cv {
+			display: flex;
+			flex-direction: column;
+			@media only screen and (min-width: 600px) {
+				margin: 0 auto;
+				max-width: 70%;
+				flex-direction: row;
+				align-items: flex-start;
+				.cv-left {
+					text-align: right;
+				}
+				.cv-left,
+				.cv-right {
+					max-width: 50%;
+					margin-top: 4em;
+				}
+			}
+			.cv-section {
+				padding: 1em 2em;
+			}
+			.skill-wrapper {
+				.skill-icon {
+					height: 30px;
+					color: $color-text;
+					margin: 1em 0 0 1em;
+				}
+			}
+		}
+		&#contact {
+			height: 100vh;
+			.social-nav {
+				ion-icon {
+					font-size: 32px;
+					padding: 1em 0.3em;
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					user-select: none;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	width: 100%;
+	height: 50px;
+	padding: 0.2em 1em;
+	flex-shrink: 0;
+	text-align: center;
+	p {
+		font-size: 0.8em;
+	}
+}
+
+/* ICONS */
+
+ion-icon {
+	font-size: 24px;
+	&:active {
+		transform: translateY(1px);
+	}
+}
+
+/* Mood-selector */
+
+#mood-selector {
+	display: flex;
+	align-items: center;
+	p {
+		font-size: 0.9em;
+		margin-right: 1em;
+		text-transform: uppercase;
+	}
+	div {
+		margin: 0 0.5em;
+	}
+	.diamond {
+		width: 0;
+		height: 0;
+		border: 10px solid transparent;
+		position: relative;
+		top: -10px;
+		&:after {
+			content: "";
+			position: absolute;
+			left: -10px;
+			top: 10px;
+			width: 0;
+			height: 0;
+			border: 10px solid transparent;
+		}
+		&.diamond-dark-primary {
+			border-bottom-color: $color-medium;
+			&:after {
+				border-top-color: $color-accent-primary;
+			}
+		}
+		&.diamond-dark-secondary {
+			border-bottom-color: $color-medium;
+			&:after {
+				border-top-color: $color-accent-secondary;
+			}
+		}
+		&.diamond-light-primary {
+			border-bottom-color: $color-text;
+			&:after {
+				border-top-color: $color-accent-primary;
+			}
+		}
+		&.diamond-light-secondary {
+			border-bottom-color: $color-text;
+			&:after {
+				border-top-color: $color-accent-secondary;
+			}
+		}
+	}
+}
+
+/* image slider (swiper.js)  */
+
+.swiper-container {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+}
+
+.swiper-container img {
+	width: 100%;
+}
+
+.swiper-container .swiper-button-next,
+.swiper-container .swiper-button-prev {
+	color: $color-text;
+}
