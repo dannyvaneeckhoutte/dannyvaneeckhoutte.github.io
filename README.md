@@ -1,7 +1,7 @@
 # Portfolio 2.0
 
 This is my online CV & portfolio, always changing and evolving, so be sure to drop by from time to time!<br/>
-You can [visit the live site here.](https://dveportfolio.netlify.app)
+You can [visit the live site here.](https://dannyvaneeckhoutte.github.io/)
 
 ## To Do
 
