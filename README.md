@@ -1,6 +1,6 @@
 # Portfolio 2.0
 
-Portfolio 2.0 is my personal webspace, always changing and evolving, so be sure to drop by from time to time!<br/>
+This is my online CV & portfolio, always changing and evolving, so be sure to drop by from time to time!<br/>
 You can [visit the live site here.](https://dveportfolio.netlify.app)
 
 ## To Do
